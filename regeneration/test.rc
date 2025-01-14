@@ -1,0 +1,12 @@
+use rand::Rng;
+
+fn main() {
+    let mut rng = rand::thread_rng();
+    let count = 10; // Количество случайных чисел
+
+    println!("Случайные числа:");
+    for _ in 0..count {
+        let random_number: u32 = rng.gen_range(1..101); // Генерация числа от 1 до 100
+        println!("{}", random_number);
+    }
+}

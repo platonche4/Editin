@@ -1,0 +1,42 @@
+# InoLang Program Example
+
+function printNonsense() {
+    let nonsense = "Бессмысленный текст. " * 10000;  // Создаем длинную строку
+    print(nonsense);
+}
+
+function countToHundred() {
+    for (let i = 1; i <= 100; i++) {
+        print("Счетчик: " + i);  // Выводим счетчик
+    }
+}
+
+function repeatString(text, times) {
+    let result = "";
+    for (let i = 0; i < times; i++) {
+        result += text;  // Соединяем строки
+    }
+    return result;
+}
+
+function generateRandomNonsense() {
+    let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let nonsense = "";
+    for (let i = 0; i < 1000000; i++) {
+        let randomIndex = random(0, chars.length - 1);
+        nonsense += chars[randomIndex];  // Генерируем случайные символы
+    }
+    print(nonsense);
+}
+
+function main() {
+    print("Начало программы на InoLang!");
+    printNonsense();
+    countToHundred();
+    let repeated = repeatString("Это бессмысленно. ", 10000);
+    print(repeated);
+    generateRandomNonsense();
+    print("Конец программы на InoLang.");
+}
+
+main();
